@@ -81,14 +81,14 @@ local Input = Tab:CreateInput({
 local Button = Tab:CreateButton({
 	Name = "Reset WalkSpeed",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 	end,
 })
 
 local Button = Tab:CreateButton({
-	Name = "Orca Snapshot",
+	Name = "Reset JumpPower",
 	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 55
 	end,
 })
 
@@ -141,6 +141,13 @@ local Input = Tab:CreateInput({
 	RemoveTextAfterFocusLost = false,
 	Callback = function(WrsGravity)
 		game.Workspace.Gravity = WrsGravity
+	end,
+})
+
+local Button = Tab:CreateButton({
+	Name = "Reset Gravity",
+	Callback = function()
+		game.Workspace.Gravity = "198.2"
 	end,
 })
 
